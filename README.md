@@ -4,11 +4,11 @@
 
 ## Description
 
-a cli for managing  a company's employee structure usinf node, inquirer, and mysql.
+a cli for managing  a company's employee structure using node, inquirer, and mysql.
 
 ## Demo
 
-![Demo](demo.gif)
+![Demo](/demo/demo.gif)
 
 ## Table of Contents
 

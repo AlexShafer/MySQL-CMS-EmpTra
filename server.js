@@ -22,7 +22,7 @@ const inintialize = () => {
       type: "list",
       name: "taskSelector",
       message: "What would you like to do?",
-      choices: ["Add a Department", "Add a Role", "Add an Employee", "View all Departments", "View all Roles", "View all Employees", "Update an Employee Role ", "Update an Employee Manager", "Delete a Department", "Delete a Role", "Delete an Employee", "Exit"]
+      choices: ["Add a Department", "Add a Role", "Add an Employee", "View all Departments", "View all Roles", "View all Employees", "Update an Employee Role", "Update an Employee Manager", "Delete a Department", "Delete a Role", "Delete an Employee", "Exit"]
     }
   ]).then((response) => {
     if(response.taskSelector === "Add a Department") {
@@ -184,10 +184,10 @@ const updateRole = () => {
     message: "Enter the Role ID number of the updated Role."
     }
   ]).then((response) => {
-    connection.query("UPDATE employee SET ? WHERE",
+    connection.query("UPDATE employee SET ? WHERE ?",
     [
       {
-        role_id: response.updateRoleId
+        role_id: response.updatedRoleId
       },
       {
         employee_id: response.employeeIdNumber
@@ -213,7 +213,7 @@ const updateManager = () => {
     message: "Enter the Manager ID number of the updated Manager."
     }
   ]).then((response) => {
-    connection.query("UPDATE employee SET ? WHERE",
+    connection.query("UPDATE employee SET ? WHERE ?",
     [
       {
         manager_id: response.updateManagerId
@@ -279,7 +279,7 @@ const deleteEmployee = () => {
     message: "Enter the Employee ID number of the Employee to be deleted."
     }
   ]).then((response) => {
-    connection.query("DELETE FROM role WHERE ?",
+    connection.query("DELETE FROM employee WHERE ?",
     [
       {
         employee_id: response.deleteEmployeeId
@@ -291,5 +291,3 @@ const deleteEmployee = () => {
     });
   });
 }
-
-

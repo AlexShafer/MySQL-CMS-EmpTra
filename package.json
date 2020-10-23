@@ -1,7 +1,7 @@
 {
   "name": "mysql-cms-emptra",
   "version": "1.0.0",
-  "description": "a cli for managing  a company's employee structure usinf node, inquirer, and mysql. ",
+  "description": "a cli for managing  a company's employee structure using node, inquirer, and mysql. ",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

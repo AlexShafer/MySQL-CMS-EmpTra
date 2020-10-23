@@ -6,13 +6,13 @@ USE employee_trackerDB;
 
 CREATE TABLE department (
   department_id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(30) NOT NULL,
+  department_name VARCHAR(30) NOT NULL,
   PRIMARY KEY (department_id)
 );
 
 CREATE TABLE role (
   role_id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(30) NOT NULL,
+  role_title VARCHAR(30) NOT NULL,
   salary DECIMAL(10,2) NOT NULL,
   department_id INT NOT NULL,
   PRIMARY KEY (role_id),
